@@ -34,6 +34,7 @@ dependencies:
   bloc: ^8.1.2
   flutter_bloc: ^8.1.3
   connectivity_plus: ^4.0.2
+  loading_animation_widget: ^1.2.0+4
 
 
 
@@ -79,10 +80,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: vazir
-      fonts:
-        - asset: assets/fonts/varzir.ttf
+  # fonts:
+  #   - family: vazir
+  #     fonts:
+  #       - asset: assets/fonts/varzir.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

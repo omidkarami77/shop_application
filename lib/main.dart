@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:shop_application/freatures/freatures_intro/pressentation/splash_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop_application/freatures/freatures_intro/pressentation/bloc/spash_cubit/splash_cubit.dart';
+import 'package:shop_application/freatures/freatures_intro/pressentation/screens/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiBlocProvider(
+    providers: [
+      BlocProvider(
+        create: (context) => SplashCubit(),
+      ),
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -11,7 +20,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'vazir'),
       title: 'shop app',
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
